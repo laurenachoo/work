@@ -1,0 +1,32 @@
+#Weight Converter
+
+puts "Would you like to convert from [lbs] or [kg]?"
+response = gets.chomp
+
+case response.downcase
+ when 'lbs'
+  #Conversion Rate
+  conversionRate = 0.453592
+
+  #Print the following on the screen
+  print "Enter your weight in lbs: "
+
+  #This sets the variable to what the user inputs and changes it into an      integer
+  lbs = gets.chomp.to_i
+
+  #Multiply the lbs weight by the conversion rate
+  kg = lbs*conversionRate
+
+  #Write the final weight converted into kg
+  puts "Your weight is #{kg} kg"
+
+
+ when 'kg'
+  conversionRate = 2.20462
+  print "Enter your weight in kg: "
+
+  kg = gets.chomp.to_i
+  lbs = kg*conversionRate
+  puts "Your weight is #{lbs} lbs" 
+  
+ end 
