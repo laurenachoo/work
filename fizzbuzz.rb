@@ -1,23 +1,11 @@
-def fizzbuzz(number)
-	return "FizzBuzz" if is_divisible_by_fifteen?(number)
-	return "Buzz" if is_divisible_by_five?(number)
-	return "Fizz" if is_divisible_by_three?(number)
-	number	
+1.upto 100 do |i|
+    if i % 3 == 0 && i % 5 == 0
+    puts 'fizzbuzz'
+    elsif i % 3 == 0
+    puts 'fizz'
+    elsif i % 5 == 0
+    puts 'buzz'
+    else
+    puts i
+    end
 end
-
-def is_divisible_by_three?(number)
-	is_divisible_by(number,3)
-end
-
-def is_divisible_by_five?(number)
-	is_divisible_by(number, 5)
-end
-
-def is_divisible_by_fifteen?(number)
-	is_divisible_by(number, 15)
-end
-
-def is_divisible_by(number,divisor)
-	number % divisor == 0
-end
-puts (1..100).map{|number| fizzbuzz(number)}
