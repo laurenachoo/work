@@ -1,0 +1,109 @@
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #232323;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  margin: 40px 0 0 0;
+  position: relative;
+  border-radius: 12px;
+}
+
+p {
+  color: rgba(255,255,255,1);
+  background: rgba(0,0,0,1);
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  text-align: justify;
+  line-height: 28px;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+.first {
+  background: url("http://i.imgur.com/hlrCBcn.jpg?3");
+}
+.second {
+  background: url("http://i.imgur.com/uFDDfb6.jpg?2");
+}
+.third {
+  background: url("http://i.imgur.com/VgHAPg3.jpg?1"); 
+}
+.price {
+  float: right;
+}
+small {
+  opacity: 0;
+}
+.show-description p {
+  height: 150px;
+}
+.show-description small {
+  opacity: 1;
+}
+h1 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 75px;
+  text-align: center;
+  margin: 60px 0 0 0;
+  color: #aaaaaa;
+}
+h2 {
+  text-align: center;
+  margin: 0px 0 70px 0;
+  color: #bbbbbb;
+}
+@media (max-width: 500px) {
+    h1 {
+      font-size: 50px;
+      margin: 20px 0 30px 0;
+    }
+    div {
+      margin: 20px 12px 0 12px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    small {
+      font-size: 16px;
+    }
+}
+</style>
+</head>
+<body>
+  <h1>craftwerx labs</h1>
+  <h2>Hand Crafted Beer and Grub in Vancouver.</h2>
+  <div class="first">
+    <p>Click here for description<span class="price">$14</span><br />
+    <small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small>
+    </p>
+  </div>
+  <div class="second">
+    <p>Click here for description<span class="price">$22</span><br />
+    <small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small>
+    </p>
+  </div>
+  <div class="third">
+    <p>fruitcake marzipan pudding dragee <span class="price">$8</span><br />
+    <small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small>
+    </p>
+  </div>
+  <script>
+    $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+    });  
+</script>
+</body>
